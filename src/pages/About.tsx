@@ -6,9 +6,9 @@ const About = () => {
       {/* Hero Section */}
       <section className="py-20 bg-spa-cream relative overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-16 left-0 w-40 h-40 bg-spa-accent/15 transform -translate-x-20 rotate-12" 
+          <div className="absolute top-16 left-0 w-80 h-80 bg-spa-accent/15 transform -translate-x-40 rotate-12" 
                style={{borderRadius: '50% 60% 40% 50% / 60% 50% 60% 40%'}}></div>
-          <div className="absolute bottom-20 right-0 w-56 h-56 bg-spa-earth/10 transform translate-x-28 -rotate-12" 
+          <div className="absolute bottom-20 right-0 w-96 h-96 bg-spa-earth/10 transform translate-x-48 -rotate-12" 
                style={{borderRadius: '40% 60% 70% 30% / 40% 70% 30% 60%'}}></div>
         </div>
         

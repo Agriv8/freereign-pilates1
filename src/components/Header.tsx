@@ -11,7 +11,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
             <img 
-              className="h-12 w-auto filter brightness-0" 
+              className="h-12 w-auto" 
               src="/client-content/branding/Main Logo-White-RGB.webp" 
               alt="Free Rein Pilates"
             />
@@ -28,7 +28,7 @@ const Header = () => {
                   Services
                 </button>
                 {/* Mega Menu */}
-                <div className="absolute left-0 mt-2 w-[800px] bg-spa-ivory shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-[800px] bg-spa-ivory shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="grid grid-cols-2 lg:grid-cols-3 gap-1 p-4">
                     <Link to="/services/mat-pilates" className="group/item p-4 hover:bg-spa-cream transition-colors duration-200">
                       <div className="flex items-center space-x-3">
@@ -105,6 +105,9 @@ const Header = () => {
               <Link to="/about" className="text-spa-text hover:text-spa-accent px-3 py-2 text-sm font-medium transition-colors duration-200">
                 About
               </Link>
+              <Link to="/shop" className="text-spa-text hover:text-spa-accent px-3 py-2 text-sm font-medium transition-colors duration-200">
+                Shop
+              </Link>
               <Link to="/contact" className="text-spa-text hover:text-spa-accent px-3 py-2 text-sm font-medium transition-colors duration-200">
                 Contact
               </Link>
@@ -155,6 +158,9 @@ const Header = () => {
               </Link>
               <Link to="/about" className="text-spa-text hover:text-spa-accent block px-3 py-2 text-base font-medium" onClick={() => setIsMenuOpen(false)}>
                 About
+              </Link>
+              <Link to="/shop" className="text-spa-text hover:text-spa-accent block px-3 py-2 text-base font-medium" onClick={() => setIsMenuOpen(false)}>
+                Shop
               </Link>
               <Link to="/contact" className="text-spa-text hover:text-spa-accent block px-3 py-2 text-base font-medium" onClick={() => setIsMenuOpen(false)}>
                 Contact

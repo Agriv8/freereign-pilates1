@@ -3,16 +3,18 @@ const Testimonials = () => {
     <section className="py-20 bg-spa-cream relative overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute inset-0 z-0">
-        {/* Darker Solid Geometric Shapes */}
-        <div className="absolute top-32 right-16 w-40 h-40 bg-spa-charcoal/15 transform rotate-45"></div>
+        {/* Darker Organic Blob Shapes - Much Bigger */}
+        <div className="absolute top-32 right-16 w-80 h-80 bg-spa-charcoal/15 transform rotate-45"
+             style={{borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%'}}></div>
         
-        <div className="absolute bottom-40 left-12 w-56 h-28 bg-spa-earth/25 transform -rotate-12" 
-             style={{borderRadius: '60px'}}></div>
+        <div className="absolute bottom-40 left-12 w-96 h-56 bg-spa-earth/25 transform -rotate-12" 
+             style={{borderRadius: '72% 28% 48% 48% / 28% 28% 72% 72%'}}></div>
         
-        <div className="absolute top-64 left-1/3 w-24 h-48 bg-spa-stone/20 transform rotate-12" 
-             style={{borderRadius: '50px'}}></div>
+        <div className="absolute top-64 left-1/3 w-48 h-96 bg-spa-stone/20 transform rotate-12" 
+             style={{borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%'}}></div>
         
-        <div className="absolute bottom-64 right-1/4 w-32 h-32 bg-spa-charcoal/12 rounded-full"></div>
+        <div className="absolute bottom-64 right-1/4 w-64 h-64 bg-spa-charcoal/12"
+             style={{borderRadius: '40% 60% 70% 30% / 40% 70% 30% 60%'}}></div>
       </div>
       
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -73,11 +75,10 @@ const Testimonials = () => {
           
           <div className="relative">
             <img
-              className="w-full shadow-lg"
+              className="w-full rounded-lg shadow-xl"
               src="/client-content/about/studio.webp"
               alt="Free Rein Pilates Studio"
             />
-            <div className="absolute -bottom-4 -left-4 w-full h-full border border-spa-sand -z-10"></div>
           </div>
         </div>
       </div>

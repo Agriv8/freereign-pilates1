@@ -45,7 +45,7 @@ const Hero = () => {
           {/* Logo */}
           <div className="mb-12">
             <img 
-              className="h-32 md:h-40 w-auto mx-auto filter brightness-0" 
+              className="h-32 md:h-40 w-auto mx-auto drop-shadow-2xl" 
               src="/client-content/branding/Main Logo-White-RGB.webp" 
               alt="Free Rein Pilates"
             />

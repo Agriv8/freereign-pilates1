@@ -3,18 +3,18 @@ const About = () => {
     <section id="about" className="py-20 bg-spa-cream relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 z-0">
-        {/* Organic Shapes */}
-        <div className="absolute top-16 left-0 w-40 h-40 bg-spa-sand/15 transform -translate-x-20 rotate-12" 
+        {/* Organic Shapes - Much Bigger */}
+        <div className="absolute top-16 left-0 w-80 h-80 bg-spa-sand/15 transform -translate-x-40 rotate-12" 
              style={{borderRadius: '50% 60% 40% 50% / 60% 50% 60% 40%'}}></div>
         
-        <div className="absolute bottom-20 right-0 w-56 h-56 bg-spa-earth/10 transform translate-x-28 -rotate-12" 
+        <div className="absolute bottom-20 right-0 w-96 h-96 bg-spa-earth/10 transform translate-x-48 -rotate-12" 
              style={{borderRadius: '40% 60% 70% 30% / 40% 70% 30% 60%'}}></div>
         
-        {/* Additional Darker Shapes */}
-        <div className="absolute top-1/2 left-8 w-32 h-64 bg-spa-charcoal/16 transform rotate-45" 
-             style={{borderRadius: '60px'}}></div>
+        {/* Additional Darker Shapes - Much Bigger */}
+        <div className="absolute top-1/2 left-8 w-64 h-96 bg-spa-charcoal/16 transform rotate-45" 
+             style={{borderRadius: '100px'}}></div>
         
-        <div className="absolute bottom-16 right-12 w-44 h-44 bg-spa-earth/20 transform -rotate-30"></div>
+        <div className="absolute bottom-16 right-12 w-80 h-80 bg-spa-earth/20 transform -rotate-30"></div>
       </div>
       
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -32,11 +32,10 @@ const About = () => {
           <div className="order-2 lg:order-1">
             <div className="relative">
               <img
-                className="w-full max-w-md mx-auto rounded-none shadow-lg"
+                className="w-full max-w-md mx-auto rounded-lg shadow-xl"
                 src="/client-content/about/erin 2.webp"
                 alt="Erin - Pilates Instructor"
               />
-              <div className="absolute -bottom-4 -right-4 w-full h-full border border-spa-sand -z-10"></div>
             </div>
           </div>
           

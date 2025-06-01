@@ -4,8 +4,9 @@ const MatPilates = () => {
       {/* Hero Section */}
       <section className="py-20 bg-spa-cream relative overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-20 right-8 w-32 h-32 bg-spa-earth/15 transform rotate-45"></div>
-          <div className="absolute bottom-20 left-8 w-48 h-48 bg-spa-accent/10 transform -rotate-12" 
+          <div className="absolute top-20 right-8 w-64 h-64 bg-spa-earth/15 transform rotate-45"
+               style={{borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%'}}></div>
+          <div className="absolute bottom-20 left-8 w-96 h-96 bg-spa-accent/10 transform -rotate-12" 
                style={{borderRadius: '40% 60% 70% 30% / 40% 70% 30% 60%'}}></div>
         </div>
         

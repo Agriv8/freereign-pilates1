@@ -4,9 +4,10 @@ const StudioPilates = () => {
       {/* Hero Section */}
       <section className="py-20 bg-spa-cream relative overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-20 right-8 w-40 h-40 bg-spa-accent/15 transform rotate-45"></div>
+          <div className="absolute top-20 right-8 w-40 h-40 bg-spa-accent/15 transform rotate-45"
+               style={{borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%'}}></div>
           <div className="absolute bottom-20 left-8 w-56 h-28 bg-spa-earth/20 transform -rotate-12" 
-               style={{borderRadius: '60px'}}></div>
+               style={{borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%'}}></div>
         </div>
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -28,7 +29,7 @@ const StudioPilates = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <img
-                className="w-full h-96 object-cover shadow-lg"
+                className="w-full h-96 object-cover rounded-lg shadow-lg"
                 src="/client-content/services/studio-pilates/1-2-1- Studio Pilates.webp"
                 alt="Studio Pilates Session"
               />

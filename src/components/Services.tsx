@@ -36,19 +36,21 @@ const Services = () => {
     <section id="services" className="py-20 bg-spa-warm relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 z-0">
-        {/* Darker Solid Shapes */}
-        <div className="absolute top-20 right-8 w-64 h-32 bg-spa-charcoal/18 transform rotate-12" 
-             style={{borderRadius: '80px'}}></div>
+        {/* Darker Solid Blob Shapes - Much Bigger */}
+        <div className="absolute top-20 right-8 w-96 h-64 bg-spa-charcoal/18 transform rotate-12" 
+             style={{borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%'}}></div>
         
-        <div className="absolute top-96 left-4 w-48 h-48 bg-spa-earth/22 transform -rotate-45"></div>
+        <div className="absolute top-96 left-4 w-80 h-80 bg-spa-earth/22 transform -rotate-45"
+             style={{borderRadius: '40% 60% 70% 30% / 40% 50% 60% 30%'}}></div>
         
-        <div className="absolute bottom-32 right-20 w-36 h-72 bg-spa-stone/16 transform rotate-6" 
-             style={{borderRadius: '100px'}}></div>
+        <div className="absolute bottom-32 right-20 w-64 h-96 bg-spa-stone/16 transform rotate-6" 
+             style={{borderRadius: '72% 28% 48% 48% / 28% 28% 72% 72%'}}></div>
         
-        <div className="absolute bottom-80 left-16 w-40 h-40 bg-spa-charcoal/14 rounded-full"></div>
+        <div className="absolute bottom-80 left-16 w-72 h-72 bg-spa-charcoal/14"
+             style={{borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%'}}></div>
         
-        <div className="absolute top-1/2 right-1/3 w-28 h-56 bg-spa-earth/20 transform -rotate-12" 
-             style={{borderRadius: '70px'}}></div>
+        <div className="absolute top-1/2 right-1/3 w-56 h-96 bg-spa-earth/20 transform -rotate-12" 
+             style={{borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%'}}></div>
       </div>
       
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -64,18 +66,19 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="space-y-12">
+        <div className="space-y-0">
           {services.map((service, index) => (
+            <>
             <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
               {/* Image */}
               <div className={`${index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
-                <div className="relative group">
+                <div className="relative group overflow-hidden rounded-lg">
                   <img
-                    className="w-full h-80 object-cover shadow-lg transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
                     src={service.image}
                     alt={service.name}
                   />
-                  <div className="absolute inset-0 bg-spa-charcoal/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-spa-charcoal/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </div>
               
@@ -99,9 +102,20 @@ const Services = () => {
                   </button>
                 </div>
                 
-                <div className="w-12 h-px bg-spa-earth"></div>
               </div>
             </div>
+            
+            {/* Creative Divider */}
+            {index < services.length - 1 && (
+              <div className="flex items-center justify-center py-16">
+                <div className="flex space-x-4 items-center">
+                  <div className="w-16 h-16 rounded-full bg-spa-earth/20"></div>
+                  <div className="w-12 h-12 rounded-full bg-spa-accent/15"></div>
+                  <div className="w-8 h-8 rounded-full bg-spa-stone/20"></div>
+                </div>
+              </div>
+            )}
+            </>
           ))}
         </div>
 

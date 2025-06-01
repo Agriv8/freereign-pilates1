@@ -4,8 +4,10 @@ const EquestrianPilates = () => {
       {/* Hero Section */}
       <section className="py-20 bg-spa-cream relative overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-32 right-16 w-40 h-40 bg-spa-accent/15 transform rotate-45"></div>
-          <div className="absolute bottom-40 left-12 w-56 h-28 bg-spa-earth/20 transform -rotate-12" style={{borderRadius: '60px'}}></div>
+          <div className="absolute top-32 right-16 w-40 h-40 bg-spa-accent/15 transform rotate-45"
+               style={{borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%'}}></div>
+          <div className="absolute bottom-40 left-12 w-56 h-28 bg-spa-earth/20 transform -rotate-12" 
+               style={{borderRadius: '72% 28% 48% 48% / 28% 28% 72% 72%'}}></div>
         </div>
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

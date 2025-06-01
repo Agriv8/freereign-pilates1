@@ -3,13 +3,15 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-spa-charcoal relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 z-0">
-        {/* Geometric Shapes */}
-        <div className="absolute top-24 left-16 w-20 h-20 bg-spa-earth/20 transform rotate-45"></div>
-        <div className="absolute top-40 right-20 w-16 h-32 bg-spa-sand/15 transform -rotate-12" 
-             style={{borderRadius: '50px'}}></div>
-        <div className="absolute bottom-40 left-32 w-24 h-24 bg-spa-stone/15 rounded-full"></div>
-        <div className="absolute bottom-24 right-40 w-32 h-16 bg-spa-earth/10 transform rotate-12" 
-             style={{borderRadius: '50px'}}></div>
+        {/* Organic Blob Shapes - Much Bigger */}
+        <div className="absolute top-24 left-16 w-48 h-48 bg-spa-earth/20 transform rotate-45"
+             style={{borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%'}}></div>
+        <div className="absolute top-40 right-20 w-40 h-64 bg-spa-sand/15 transform -rotate-12" 
+             style={{borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%'}}></div>
+        <div className="absolute bottom-40 left-32 w-56 h-56 bg-spa-stone/15"
+             style={{borderRadius: '40% 60% 70% 30% / 40% 70% 30% 60%'}}></div>
+        <div className="absolute bottom-24 right-40 w-64 h-32 bg-spa-earth/10 transform rotate-12" 
+             style={{borderRadius: '72% 28% 48% 48% / 28% 28% 72% 72%'}}></div>
         
         {/* Subtle Grid Pattern */}
         <div className="absolute inset-0 opacity-5"

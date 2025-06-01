@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Shop from './pages/Shop'
 import MatPilates from './pages/services/MatPilates'
 import StudioPilates from './pages/services/StudioPilates'
 import SportsTherapy from './pages/services/SportsTherapy'
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/shop" element={<Shop />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services/mat-pilates" element={<MatPilates />} />
           <Route path="/services/studio-pilates" element={<StudioPilates />} />
