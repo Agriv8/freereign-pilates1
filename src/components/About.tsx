@@ -1,63 +1,99 @@
 const About = () => {
   return (
-    <section id="about" className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:text-center">
-          <h2 className="text-base text-pilates-sage font-semibold tracking-wide uppercase">About Us</h2>
-          <p className="mt-2 text-3xl leading-8 font-bold tracking-tight text-pilates-charcoal sm:text-4xl">
-            Your Journey to Wellness Starts Here
-          </p>
+    <section id="about" className="py-20 bg-spa-cream relative overflow-hidden">
+      {/* Decorative Background Elements */}
+      <div className="absolute inset-0 z-0">
+        {/* Organic Shapes */}
+        <div className="absolute top-16 left-0 w-40 h-40 bg-spa-sand/15 transform -translate-x-20 rotate-12" 
+             style={{borderRadius: '50% 60% 40% 50% / 60% 50% 60% 40%'}}></div>
+        
+        <div className="absolute bottom-20 right-0 w-56 h-56 bg-spa-earth/10 transform translate-x-28 -rotate-12" 
+             style={{borderRadius: '40% 60% 70% 30% / 40% 70% 30% 60%'}}></div>
+        
+        {/* Additional Darker Shapes */}
+        <div className="absolute top-1/2 left-8 w-32 h-64 bg-spa-charcoal/16 transform rotate-45" 
+             style={{borderRadius: '60px'}}></div>
+        
+        <div className="absolute bottom-16 right-12 w-44 h-44 bg-spa-earth/20 transform -rotate-30"></div>
+      </div>
+      
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* About Us Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-serif text-spa-text mb-6">
+            About Us
+          </h2>
+          <div className="w-16 h-px bg-spa-earth mx-auto"></div>
         </div>
 
-        <div className="mt-16">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 items-center">
-            {/* About Erin */}
-            <div>
-              <h3 className="text-2xl font-bold text-pilates-charcoal mb-4">About Erin</h3>
-              <p className="text-gray-600 mb-6">
-                I'm Erin, a certified Pilates instructor and Sports therapist with nearly a decade of experience 
-                teaching and treating muscular discomfort. Over the years I have gained a wealth of knowledge 
-                and understanding of the human body and how beneficial regular Pilates practice can be for all.
-              </p>
-              <p className="text-gray-600">
-                I hope for years to come, that I will continue my own professional development and share my 
-                expertise with many.
-              </p>
-            </div>
-            
-            <div className="flex justify-center">
+        {/* Main About Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+          {/* Erin's Photo */}
+          <div className="order-2 lg:order-1">
+            <div className="relative">
               <img
-                className="rounded-lg shadow-lg max-w-sm"
-                src="/client-content/erin 2.webp"
+                className="w-full max-w-md mx-auto rounded-none shadow-lg"
+                src="/client-content/about/erin 2.webp"
                 alt="Erin - Pilates Instructor"
               />
+              <div className="absolute -bottom-4 -right-4 w-full h-full border border-spa-sand -z-10"></div>
             </div>
           </div>
+          
+          {/* About Content */}
+          <div className="order-1 lg:order-2 space-y-6">
+            <h3 className="text-3xl font-serif text-spa-charcoal mb-6">
+              About Erin
+            </h3>
+            
+            <p className="text-spa-charcoal/80 leading-relaxed text-lg">
+              I'm Erin, a certified Pilates instructor and Sports therapist with nearly a decade of experience 
+              teaching and treating muscular discomfort.
+            </p>
+            
+            <p className="text-spa-charcoal/80 leading-relaxed">
+              Over the years I have gained a wealth of knowledge and understanding of the human body and how 
+              beneficial regular Pilates practice can be for all. I hope for years to come, that I will continue 
+              my own professional development and share my expertise with many.
+            </p>
 
-          <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-            {/* What is Pilates */}
-            <div>
-              <h3 className="text-2xl font-bold text-pilates-charcoal mb-4">What is Pilates?</h3>
-              <p className="text-gray-600">
-                Joseph Pilates (founder) choreographed a low impact body-conditioning exercise method that works 
-                by targeting and isolating the deep postural (core) muscles. With emphasis on slow controlled 
-                breathing and movement to rebalance the body and improve posture which promotes subconscious 
-                correct alignment.
-              </p>
+            <div className="pt-4">
+              <div className="w-12 h-px bg-spa-earth"></div>
             </div>
+          </div>
+        </div>
 
-            {/* Why Pilates */}
-            <div>
-              <h3 className="text-2xl font-bold text-pilates-charcoal mb-4">Why Pilates?</h3>
-              <blockquote className="text-pilates-sage text-lg italic mb-4">
+        {/* Philosophy Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* What is Pilates */}
+          <div className="bg-spa-ivory p-8 space-y-6">
+            <h3 className="text-2xl font-serif text-spa-charcoal">
+              What is Pilates?
+            </h3>
+            <p className="text-spa-charcoal/80 leading-relaxed">
+              Joseph Pilates choreographed a low impact body-conditioning exercise method that works by targeting 
+              and isolating the deep postural (core) muscles. With emphasis on slow controlled breathing and 
+              movement to rebalance the body and improve posture.
+            </p>
+          </div>
+
+          {/* Why Pilates */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-serif text-spa-charcoal">
+              Why Pilates?
+            </h3>
+            
+            <blockquote className="border-l-2 border-spa-earth pl-6 py-4 bg-spa-warm/50">
+              <p className="text-xl font-serif italic text-spa-charcoal mb-2">
                 "Change happens through movement and movement heals"
-              </blockquote>
-              <p className="text-gray-600 text-sm">— Joseph Pilates</p>
-              <p className="text-gray-600 mt-4">
-                Pilates achieves the perfect balance between strength and flexibility and is a great way to 
-                help relieve unwanted stress and tension.
               </p>
-            </div>
+              <cite className="text-sm text-spa-earth not-italic">— Joseph Pilates</cite>
+            </blockquote>
+            
+            <p className="text-spa-charcoal/80 leading-relaxed">
+              Pilates achieves the perfect balance between strength and flexibility and is a great way to 
+              help relieve unwanted stress and tension.
+            </p>
           </div>
         </div>
       </div>

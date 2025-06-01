@@ -1,47 +1,84 @@
 const Hero = () => {
   return (
-    <section id="home" className="relative bg-pilates-cream overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        <div className="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-          <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-            <div className="sm:text-center lg:text-left">
-              <h1 className="text-4xl tracking-tight font-bold text-pilates-charcoal sm:text-5xl md:text-6xl">
-                <span className="block xl:inline">Transform Your Body</span>{' '}
-                <span className="block text-pilates-sage xl:inline">with Pilates</span>
-              </h1>
-              <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                Free Rein Pilates offers a range of services with the aim to enable all to access Pilates. 
-                From community Matwork courses to luxury day retreats, we're here to help you start or develop 
-                your Pilates practice.
-              </p>
-              <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                <div className="rounded-md shadow">
-                  <a
-                    href="#services"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pilates-sage hover:bg-opacity-90 md:py-4 md:text-lg md:px-10 transition-all duration-200"
-                  >
-                    Explore Services
-                  </a>
-                </div>
-                <div className="mt-3 sm:mt-0 sm:ml-3">
-                  <a
-                    href="#contact"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-pilates-sage text-base font-medium rounded-md text-pilates-sage bg-white hover:bg-pilates-cream md:py-4 md:text-lg md:px-10 transition-all duration-200"
-                  >
-                    Get In Touch
-                  </a>
-                </div>
-              </div>
-            </div>
-          </main>
-        </div>
+    <section id="home" className="relative min-h-screen bg-spa-warm overflow-hidden">
+      {/* Decorative Background Shapes */}
+      <div className="absolute inset-0 z-0">
+        {/* Large Circle */}
+        <div className="absolute top-20 right-0 w-96 h-96 bg-spa-sand/20 rounded-full transform translate-x-48"></div>
+        
+        {/* Medium Circle */}
+        <div className="absolute bottom-32 left-0 w-64 h-64 bg-spa-earth/10 rounded-full transform -translate-x-32"></div>
+        
+        {/* Small Scattered Circles */}
+        <div className="absolute top-1/3 left-1/4 w-8 h-8 bg-spa-earth/30 rounded-full"></div>
+        <div className="absolute top-1/2 right-1/3 w-6 h-6 bg-spa-sand/40 rounded-full"></div>
+        <div className="absolute bottom-1/3 left-1/3 w-4 h-4 bg-spa-stone/50 rounded-full"></div>
+        
+        {/* Organic Blob Shape */}
+        <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-spa-cream/30 transform rotate-45" 
+             style={{borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%'}}></div>
       </div>
-      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+
+      {/* Background Image */}
+      <div className="absolute inset-0 z-10">
         <img
-          className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src="/client-content/home page banner.webp"
+          className="w-full h-full object-cover opacity-70"
+          src="/client-content/general/home page banner.webp"
           alt="Pilates studio"
         />
+        <div className="absolute inset-0 bg-spa-warm/50"></div>
+        
+        {/* Subtle Pattern Overlay */}
+        <div className="absolute inset-0 opacity-10" 
+             style={{
+               backgroundImage: `radial-gradient(circle at 20% 50%, rgba(180, 160, 130, 0.3) 0%, transparent 50%),
+                                radial-gradient(circle at 80% 20%, rgba(180, 160, 130, 0.2) 0%, transparent 50%),
+                                radial-gradient(circle at 40% 80%, rgba(180, 160, 130, 0.2) 0%, transparent 50%)`
+             }}>
+        </div>
+      </div>
+
+
+      {/* Main Content */}
+      <div className="relative z-10 flex items-center justify-center min-h-screen px-4">
+        <div className="text-center max-w-2xl">
+          {/* Logo */}
+          <div className="mb-12">
+            <img 
+              className="h-32 md:h-40 w-auto mx-auto filter brightness-0" 
+              src="/client-content/branding/Main Logo-White-RGB.webp" 
+              alt="Free Rein Pilates"
+            />
+          </div>
+
+          {/* Tagline */}
+          <p className="text-lg md:text-xl text-spa-text font-light leading-relaxed mb-12 max-w-lg mx-auto">
+            Enabling all to access Pilates through mindful movement, expert guidance, and serene spaces
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#services"
+              className="px-8 py-3 border border-spa-accent text-spa-accent hover:bg-spa-accent hover:text-spa-ivory transition-all duration-300 tracking-wider uppercase text-sm"
+            >
+              Explore Services
+            </a>
+            <a
+              href="#contact"
+              className="px-8 py-3 bg-spa-accent text-spa-ivory hover:bg-spa-text transition-all duration-300 tracking-wider uppercase text-sm"
+            >
+              Book Now
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="w-6 h-10 border border-spa-earth rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-spa-earth rounded-full mt-2 animate-bounce"></div>
+        </div>
       </div>
     </section>
   )

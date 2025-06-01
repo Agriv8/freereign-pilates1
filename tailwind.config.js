@@ -7,12 +7,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        pilates: {
-          sage: '#9CB4A8',
-          cream: '#F7F3E9',
-          charcoal: '#2C3E50',
-          gold: '#D4AF37',
-          blush: '#F4E4D6'
+        spa: {
+          warm: '#E8DDD4',      // Main warm beige background
+          cream: '#F5F1EB',     // Light cream
+          sand: '#D4C4B0',      // Sandy beige
+          earth: '#8B6914',     // Darker earth brown for better contrast
+          charcoal: '#2D2D2D',  // Darker charcoal for better readability
+          stone: '#6B5B4F',     // Darker stone for contrast
+          ivory: '#FAF8F5',     // Almost white ivory
+          text: '#1A1A1A',      // Very dark text for maximum readability
+          accent: '#7A5928'     // Brown accent color
         }
       },
       fontFamily: {

@@ -2,95 +2,141 @@ const Services = () => {
   const services = [
     {
       name: 'Mat Pilates Courses',
-      description: 'Community Mat work courses designed to improve flexibility, posture and muscular strength. Mixed ability levels welcome.',
-      image: '/client-content/Mat Pilates Courses.webp',
-      features: ['Mixed ability levels', 'Complete beginners welcome', 'Held in Shefford (SG17)', '6 week blocks']
+      description: 'Community courses designed to improve flexibility, posture and strength. All levels welcome.',
+      image: '/client-content/services/mat-pilates/Mat Pilates Courses.webp',
+      details: 'Mixed ability levels • Beginners welcome • Shefford location • 6 week blocks'
     },
     {
       name: '1-2-1 Studio Pilates',
-      description: 'Exclusive boutique home studio for private Reformer Pilates sessions tailored specifically to your fitness goals.',
-      image: '/client-content/1-2-1- Studio Pilates.webp',
-      features: ['Private sessions', 'Reformer Pilates', 'Spa-like studio', 'Tailored to your goals']
+      description: 'Private Reformer sessions in our boutique home studio, tailored to your goals.',
+      image: '/client-content/services/studio-pilates/1-2-1- Studio Pilates.webp',
+      details: 'Private sessions • Reformer Pilates • Spa-like studio • Personalized programs'
     },
     {
-      name: 'Sports Therapy Sessions',
-      description: 'Qualified Sports Therapist offering manual therapy techniques to treat soft tissue injuries and muscular discomfort.',
-      image: '/client-content/ Sports Therapy Sessions .webp',
-      features: ['LLLT therapy', 'Manual Lymphatic Drainage', 'Sports massage', 'Exercise rehabilitation']
+      name: 'Sports Therapy',
+      description: 'Professional therapy techniques to treat injuries and muscular discomfort.',
+      image: '/client-content/services/sports-therapy/ Sports Therapy Sessions .webp',
+      details: 'LLLT therapy • Lymphatic drainage • Sports massage • Rehabilitation'
     },
     {
       name: 'Equestrian Pilates',
-      description: 'Specialized Pilates programme designed with equestrian movement in mind to improve your seat and partnership with your horse.',
-      image: '/client-content/Equestrian Pilates Sessions .webp',
-      features: ['Equestrian focused', 'Improves riding position', 'Balance and stability', 'Individual training plans']
+      description: 'Specialized programme to improve your riding position and horse partnership.',
+      image: '/client-content/services/equestrian-pilates/Equestrian Pilates Sessions .webp',
+      details: 'Riding focused • Balance training • Core stability • Individual plans'
     },
     {
       name: 'Day Retreats',
-      description: 'Luxury day retreats in beautiful venues including Wrest Park Orangery, designed for relaxation and rejuvenation.',
-      image: '/client-content/Wrest Park Day Retreats.webp',
-      features: ['Luxury venues', 'Full day experience', 'Goodie bags included', 'Small group settings']
+      description: 'Luxury wellness retreats in beautiful venues for complete relaxation.',
+      image: '/client-content/services/day-retreats/Wrest Park Day Retreats.webp',
+      details: 'Luxury venues • Full day experience • Wellness packages • Small groups'
     }
   ]
 
   return (
-    <section id="services" className="py-16 bg-pilates-cream">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-base text-pilates-sage font-semibold tracking-wide uppercase">Our Services</h2>
-          <p className="mt-2 text-3xl leading-8 font-bold tracking-tight text-pilates-charcoal sm:text-4xl">
-            Find Your Perfect Pilates Experience
-          </p>
-          <p className="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">
-            We offer different services in hope to find one that tailors to you and your own Pilates goals.
+    <section id="services" className="py-20 bg-spa-warm relative overflow-hidden">
+      {/* Decorative Background Elements */}
+      <div className="absolute inset-0 z-0">
+        {/* Darker Solid Shapes */}
+        <div className="absolute top-20 right-8 w-64 h-32 bg-spa-charcoal/18 transform rotate-12" 
+             style={{borderRadius: '80px'}}></div>
+        
+        <div className="absolute top-96 left-4 w-48 h-48 bg-spa-earth/22 transform -rotate-45"></div>
+        
+        <div className="absolute bottom-32 right-20 w-36 h-72 bg-spa-stone/16 transform rotate-6" 
+             style={{borderRadius: '100px'}}></div>
+        
+        <div className="absolute bottom-80 left-16 w-40 h-40 bg-spa-charcoal/14 rounded-full"></div>
+        
+        <div className="absolute top-1/2 right-1/3 w-28 h-56 bg-spa-earth/20 transform -rotate-12" 
+             style={{borderRadius: '70px'}}></div>
+      </div>
+      
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-serif text-spa-charcoal mb-6">
+            Our Services
+          </h2>
+          <div className="w-16 h-px bg-spa-earth mx-auto mb-8"></div>
+          <p className="max-w-2xl text-lg text-spa-charcoal/80 mx-auto leading-relaxed">
+            We offer different services to find one that tailors to you and your own Pilates goals.
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {/* Services Grid */}
+        <div className="space-y-12">
           {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="h-48 overflow-hidden">
-                <img
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  src={service.image}
-                  alt={service.name}
-                />
+            <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+              {/* Image */}
+              <div className={`${index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
+                <div className="relative group">
+                  <img
+                    className="w-full h-80 object-cover shadow-lg transition-transform duration-500 group-hover:scale-105"
+                    src={service.image}
+                    alt={service.name}
+                  />
+                  <div className="absolute inset-0 bg-spa-charcoal/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-pilates-charcoal mb-3">{service.name}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <svg className="h-4 w-4 text-pilates-sage mr-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <button className="w-full bg-pilates-sage text-white py-2 px-4 rounded-md hover:bg-opacity-90 transition-colors duration-200">
-                  Learn More
-                </button>
+              
+              {/* Content */}
+              <div className={`space-y-6 ${index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
+                <h3 className="text-3xl font-serif text-spa-charcoal">
+                  {service.name}
+                </h3>
+                
+                <p className="text-lg text-spa-charcoal/80 leading-relaxed">
+                  {service.description}
+                </p>
+                
+                <p className="text-sm text-spa-earth tracking-wide">
+                  {service.details}
+                </p>
+                
+                <div className="pt-4">
+                  <button className="border border-spa-earth text-spa-earth hover:bg-spa-earth hover:text-spa-ivory transition-all duration-300 px-8 py-3 tracking-wider uppercase text-sm">
+                    Learn More
+                  </button>
+                </div>
+                
+                <div className="w-12 h-px bg-spa-earth"></div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Current Events Section */}
-        <div className="mt-16 bg-white rounded-lg shadow-lg p-8">
-          <h3 className="text-2xl font-bold text-pilates-charcoal mb-6 text-center">Current Events</h3>
-          <div className="bg-pilates-blush rounded-lg p-6">
-            <h4 className="text-xl font-semibold text-pilates-charcoal mb-2">Wrest Park Morning Retreat</h4>
-            <p className="text-gray-600 mb-4">
-              Immerse yourself for the day within the beautiful setting of Wrest Park's Orangery. 
-              A place of true elegance and grandeur, featured in Bridgerton's 'Aubrey Hall'.
+        {/* Featured Event */}
+        <div className="mt-24 bg-spa-cream p-12 text-center">
+          <h3 className="text-3xl font-serif text-spa-charcoal mb-8">
+            Featured Experience
+          </h3>
+          
+          <div className="max-w-2xl mx-auto space-y-6">
+            <h4 className="text-xl text-spa-earth font-semibold">
+              Wrest Park Morning Retreat
+            </h4>
+            
+            <p className="text-spa-charcoal/80 leading-relaxed">
+              Immerse yourself in the beautiful setting of Wrest Park's Orangery. A place of true elegance 
+              and grandeur, featured in Bridgerton's 'Aubrey Hall'.
             </p>
-            <div className="flex justify-between items-center">
-              <div>
-                <span className="text-sm text-gray-600">Duration: 4 hours</span>
-                <span className="block text-2xl font-bold text-pilates-sage">£115</span>
+            
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-6 pt-6">
+              <div className="text-center">
+                <div className="text-sm text-spa-earth tracking-wide">Duration</div>
+                <div className="text-lg font-serif text-spa-charcoal">4 Hours</div>
               </div>
-              <button className="bg-pilates-sage text-white px-6 py-2 rounded-md hover:bg-opacity-90 transition-colors duration-200">
+              
+              <div className="hidden sm:block w-px h-12 bg-spa-sand"></div>
+              
+              <div className="text-center">
+                <div className="text-sm text-spa-earth tracking-wide">Investment</div>
+                <div className="text-2xl font-serif text-spa-charcoal">£115</div>
+              </div>
+              
+              <div className="hidden sm:block w-px h-12 bg-spa-sand"></div>
+              
+              <button className="bg-spa-earth text-spa-ivory hover:bg-spa-charcoal transition-all duration-300 px-8 py-3 tracking-wider uppercase text-sm">
                 Book Now
               </button>
             </div>

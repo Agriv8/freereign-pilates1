@@ -1,20 +1,31 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
-import Hero from './components/Hero'
-import About from './components/About'
-import Services from './components/Services'
-import Testimonials from './components/Testimonials'
-import Contact from './components/Contact'
+import Home from './pages/Home'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import MatPilates from './pages/services/MatPilates'
+import StudioPilates from './pages/services/StudioPilates'
+import SportsTherapy from './pages/services/SportsTherapy'
+import EquestrianPilates from './pages/services/EquestrianPilates'
+import DayRetreats from './pages/services/DayRetreats'
 
 function App() {
   return (
-    <div className="min-h-screen bg-pilates-cream">
-      <Header />
-      <Hero />
-      <About />
-      <Services />
-      <Testimonials />
-      <Contact />
-    </div>
+    <Router>
+      <div className="min-h-screen bg-spa-warm">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/services/mat-pilates" element={<MatPilates />} />
+          <Route path="/services/studio-pilates" element={<StudioPilates />} />
+          <Route path="/services/sports-therapy" element={<SportsTherapy />} />
+          <Route path="/services/equestrian-pilates" element={<EquestrianPilates />} />
+          <Route path="/services/day-retreats" element={<DayRetreats />} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
 
