@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
@@ -13,19 +14,22 @@ import DayRetreats from './pages/services/DayRetreats'
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-spa-warm">
+      <div className="min-h-screen bg-spa-warm flex flex-col">
         <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/services/mat-pilates" element={<MatPilates />} />
-          <Route path="/services/studio-pilates" element={<StudioPilates />} />
-          <Route path="/services/sports-therapy" element={<SportsTherapy />} />
-          <Route path="/services/equestrian-pilates" element={<EquestrianPilates />} />
-          <Route path="/services/day-retreats" element={<DayRetreats />} />
-        </Routes>
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/services/mat-pilates" element={<MatPilates />} />
+            <Route path="/services/studio-pilates" element={<StudioPilates />} />
+            <Route path="/services/sports-therapy" element={<SportsTherapy />} />
+            <Route path="/services/equestrian-pilates" element={<EquestrianPilates />} />
+            <Route path="/services/day-retreats" element={<DayRetreats />} />
+          </Routes>
+        </main>
+        <Footer />
       </div>
     </Router>
   )

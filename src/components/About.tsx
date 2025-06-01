@@ -14,7 +14,8 @@ const About = () => {
         <div className="absolute top-1/2 left-8 w-64 h-96 bg-spa-charcoal/16 transform rotate-45" 
              style={{borderRadius: '100px'}}></div>
         
-        <div className="absolute bottom-16 right-12 w-80 h-80 bg-spa-earth/20 transform -rotate-30"></div>
+        <div className="absolute bottom-16 right-12 w-80 h-80 bg-spa-earth/20 transform -rotate-30"
+             style={{borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%'}}></div>
       </div>
       
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
