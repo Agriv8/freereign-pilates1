@@ -237,4 +237,6 @@ npm run lint
 ---
 
 **Last Updated**: January 6, 2025  
-**Updated By**: AiDan (Claude Code Assistant)
+**Updated By**: AiDan (Claude Code Assistant)## Deployment Information
+- Live URL: https://free-reign-pilates1.netlify.app
+- GitHub: https://github.com/Agriv8/freereign-pilates1
