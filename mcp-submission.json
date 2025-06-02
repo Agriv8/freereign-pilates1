@@ -1,0 +1,126 @@
+{
+  "project": "freereign-pilates1",
+  "submitted_at": "2025-06-02T08:32:32.896393",
+  "submitted_by": "Child Claude - Free Rein Pilates Project",
+  "mcps": [
+    {
+      "name": "mega-menu-service-preview",
+      "type": "component",
+      "category": "navigation",
+      "description": "React mega menu with service preview cards including thumbnails",
+      "tags": [
+        "react",
+        "typescript",
+        "tailwind",
+        "navigation",
+        "mega-menu",
+        "services"
+      ],
+      "version": "1.0.0",
+      "dependencies": [
+        "react",
+        "react-router-dom",
+        "tailwindcss"
+      ],
+      "code_path": "src/components/Header.tsx",
+      "code_snippet": "// Service Preview Mega Menu\n<div className=\"relative group\">\n  <button className=\"text-spa-text hover:text-spa-accent px-3 py-2 text-sm font-medium transition-colors duration-200\">\n    Services\n  </button>\n  <div className=\"absolute left-1/2 transform -translate-x-1/2 mt-2 w-[800px] bg-spa-ivory shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50\">\n    <div className=\"grid grid-cols-2 lg:grid-cols-3 gap-1 p-4\">\n      <Link to=\"/service-url\" className=\"group/item p-4 hover:bg-spa-cream transition-colors duration-200\">\n        <div className=\"flex items-center space-x-3\">\n          <img src=\"/service-image.webp\" alt=\"Service Name\" className=\"w-16 h-16 object-cover rounded\" />\n          <div>\n            <h4 className=\"font-semibold text-spa-text group-hover/item:text-spa-accent\">Service Name</h4>\n            <p className=\"text-xs text-spa-text/70 mt-1\">Brief description</p>\n          </div>\n        </div>\n      </Link>\n    </div>\n  </div>\n</div>",
+      "enhancement_for": "mega-menu-mcp"
+    },
+    {
+      "name": "spa-wellness-theme",
+      "type": "theme",
+      "category": "design-system",
+      "description": "Spa and wellness Tailwind theme with earthy colors and organic shapes",
+      "tags": [
+        "tailwind",
+        "theme",
+        "spa",
+        "wellness",
+        "design-system"
+      ],
+      "version": "1.0.0",
+      "dependencies": [
+        "tailwindcss"
+      ],
+      "code_path": "tailwind.config.js",
+      "code_snippet": "// Spa Wellness Theme Colors\ncolors: {\n  'spa-warm': '#E8DDD4',\n  'spa-cream': '#F5F1EB', \n  'spa-sand': '#D4C4B0',\n  'spa-earth': '#8B6914',\n  'spa-charcoal': '#2D2D2D',\n  'spa-ivory': '#FFFFF0',\n  'spa-stone': '#9E9E93',\n  'spa-text': '#1A1A1A',\n  'spa-accent': '#7A5928',\n  'spa-background': '#FDFCFB'\n}",
+      "new_submission": true
+    },
+    {
+      "name": "organic-blob-backgrounds",
+      "type": "utility",
+      "category": "styling",
+      "description": "CSS technique for creating organic blob shapes as decorative backgrounds",
+      "tags": [
+        "css",
+        "design",
+        "backgrounds",
+        "organic-shapes",
+        "spa"
+      ],
+      "version": "1.0.0",
+      "dependencies": [],
+      "code_path": "src/components/About.tsx",
+      "code_snippet": "// Organic Blob Shape Generator\n<div className=\"absolute top-16 left-0 w-80 h-80 bg-spa-accent/15 transform -translate-x-40 rotate-12\" \n     style={{borderRadius: '50% 60% 40% 50% / 60% 50% 60% 40%'}}></div>\n\n// More organic shapes\nstyle={{borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%'}}\nstyle={{borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%'}}\nstyle={{borderRadius: '40% 60% 70% 30% / 40% 70% 30% 60%'}}\nstyle={{borderRadius: '72% 28% 48% 48% / 28% 28% 72% 72%'}}",
+      "new_submission": true
+    },
+    {
+      "name": "service-showcase-grid",
+      "type": "component",
+      "category": "content",
+      "description": "Responsive service showcase grid with hover effects and CTAs",
+      "tags": [
+        "react",
+        "typescript",
+        "tailwind",
+        "services",
+        "grid",
+        "cards"
+      ],
+      "version": "1.0.0",
+      "dependencies": [
+        "react",
+        "react-router-dom",
+        "tailwindcss"
+      ],
+      "code_path": "src/components/Services.tsx",
+      "code_snippet": "// Service Showcase Grid\n<div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">\n  <Link to=\"/service-url\" className=\"group relative overflow-hidden\">\n    <div className=\"relative h-80 overflow-hidden\">\n      <img src=\"/service-image.webp\" alt=\"Service Name\" \n           className=\"w-full h-full object-cover transition-transform duration-500 group-hover:scale-105\" />\n      <div className=\"absolute inset-0 bg-gradient-to-t from-spa-charcoal/80 to-transparent\"></div>\n      <div className=\"absolute bottom-0 left-0 right-0 p-6 text-spa-ivory\">\n        <h3 className=\"text-2xl font-serif mb-2\">Service Name</h3>\n        <p className=\"text-sm opacity-90 mb-4\">Service description here</p>\n        <span className=\"inline-flex items-center text-sm font-medium group-hover:text-spa-earth transition-colors\">\n          Learn More\n          <svg className=\"ml-2 h-4 w-4 transition-transform group-hover:translate-x-1\" />\n        </span>\n      </div>\n    </div>\n  </Link>\n</div>",
+      "new_submission": true
+    },
+    {
+      "name": "pilates-website-template",
+      "type": "template",
+      "category": "full-site",
+      "description": "Complete Pilates/wellness business website template with booking focus",
+      "tags": [
+        "react",
+        "typescript",
+        "tailwind",
+        "pilates",
+        "wellness",
+        "business",
+        "template"
+      ],
+      "version": "1.0.0",
+      "dependencies": [
+        "react",
+        "react-router-dom",
+        "tailwindcss",
+        "vite"
+      ],
+      "code_path": "src/",
+      "features": [
+        "Service showcase with detail pages",
+        "Instructor bio section",
+        "Testimonials component",
+        "Contact form with validation",
+        "Responsive mega menu navigation",
+        "Organic decorative backgrounds",
+        "Spa/wellness theme",
+        "Mobile-first responsive design"
+      ],
+      "new_submission": true
+    }
+  ],
+  "notes": "Contributing spa/wellness themed components and enhancements to existing MCPs"
+}
